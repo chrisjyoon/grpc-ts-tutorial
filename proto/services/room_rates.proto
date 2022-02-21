@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package services.room_rates.v1;
+
+message GetRoomTypesResponse {
+  repeated string room_types = 1;
+}
+
+message GetRoomTypesRequest {
+  string hotel_code = 1;
+  string rate_code = 2;
+}
+
+service RoomRateService {
+  rpc GetRoomTypes (GetRoomTypesRequest) returns (GetRoomTypesResponse) {}
+}
