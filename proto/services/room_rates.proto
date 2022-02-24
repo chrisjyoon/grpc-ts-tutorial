@@ -11,6 +11,20 @@ message GetRoomTypesResponse {
   repeated string room_types = 1;
 }
 
+message GetRoomRateSettingsRequest {
+  string hotel_code = 1;
+  string rate_code = 2;
+  string room_type_code = 3;
+}
+
+message GetRoomRateSettingsResponse {
+  string date = 1;
+  float rate1 = 2;
+  float rate2 = 3;
+  string algorithm = 4;
+}
+
 service RoomRateService {
   rpc GetRoomTypes (GetRoomTypesRequest) returns (GetRoomTypesResponse) {}
+  rpc GetRoomRateSettings (GetRoomRateSettingsRequest) returns (GetRoomRateSettingsResponse) {}
 }
