@@ -8,7 +8,7 @@ const client = new RoomRateServiceClient(
 )
 
 const request = new GetRoomTypesRequest();
-request.setHotelCode('HOTELJACKY')
+request.setHotelCode('HOTELCHRIS')
 request.setRateCode('BAR')
 
 client.getRoomTypes(request, (err, resp) => {
