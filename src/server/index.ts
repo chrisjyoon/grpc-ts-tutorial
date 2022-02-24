@@ -24,7 +24,6 @@ const getRoomTypes = (
       break
   }
   
-
   callback(null, response)
 }
 
